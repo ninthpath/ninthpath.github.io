@@ -121,7 +121,7 @@ In this code, from ```CallbackView.as```, we see another example of how we can u
     };
 {% endhighlight %}
 
-Using the “callback” and “file” FlashVars, we can get the line 
+Using the ```callback``` and ```file``` FlashVars, we can get the line 
 
 {% highlight actionscript %}
 getURL(fcn+"('/end_stream/"+fil+"');");
@@ -129,14 +129,14 @@ getURL(fcn+"('/end_stream/"+fil+"');");
 to execute.  
 
 
-If we use ?file=video.flv&callback=urchin, it would fire off 
+If we use ```?file=video.flv&callback=urchin```, it would fire off 
 ```
 javascript:urchinTracker(‘end_stream/video.flv’);
 ```
 but that would be pretty boring.  
 
 
-By changing the “file” parameter, however, we can get it to execute custom Javascript.  
+By changing the ```file``` parameter, however, we can get it to execute custom Javascript.  
 
 Example: 
 ```
@@ -148,7 +148,7 @@ This would cause the browser to execute
 javascript:urchinTracker(‘end_stream/video’);alert(1):void(‘.flv’);
 ```
 
-Unfortunately, this can’t be used for a reflected XSS attack, since the function “urchinTracker” isn’t there if you just pull up the swf file url.  The only way to exploit this would be if a page embedded the the file and also let you specify the flashvars in the url.
+Unfortunately, this can’t be used for a reflected XSS attack, since the function ```urchinTracker``` isn’t there if you just pull up the swf file url.  The only way to exploit this would be if a page embedded the the file and also let you specify the flashvars in the url.
 
 As an example, try putting the following in a webpage.  It will automatically play, stop, and pop an alert box.  It works in Firefox, Chrome, and Safari.
 
