@@ -11,7 +11,7 @@ v4.3 POC:```http://localhost/mediaplayer.swf?aboutlink=javascript:alert(1)```
 
 
 ## Intro
-In Frans Rosen’s [talk on bug bounties](https://www.youtube.com/watch?v=KDo68Laayh8), he recommends searching for flash files, since a lot of them are vulnerable.  This got me interested in reading up on Flash files.
+In Frans Rosen’s [talk on bug bounties](https://www.youtube.com/watch?v=KDo68Laayh8), he recommends searching for Flash files, since a lot of them are vulnerable.  This piqued my interest, so I did some research.
 
 ## The Tools  
 - https://www.owasp.org/index.php/Testing_for_Cross_site_flashing_(OWASP-DV-004)
