@@ -41,7 +41,7 @@ Anyways, for v3.16, you can find the source code here:
 https://github.com/psych0d0g/kplaylist-ng/tree/master/mediaplayer-3-16
 
 In ```ConfigManager.as```, we find these lines:
-```actionscript
+```actionscript3
     public function goTo(obj,itm) {
         getURL(obj.ref.config['aboutlnk'],'_blank');
     };
@@ -52,7 +52,7 @@ The ```aboutlnk``` is a FlashVar.  getURL is an unsafe function that will run ja
 I found a copy of [version v4.3](https://web.archive.org/web/20121226095419/http://developer.longtailvideo.com/trac/changeset/HEAD/tags/mediaplayer-4.3?old_path=%2F&format=zip) in the Internet Archive.  The vulnerability is still there.  
 
 In ```Rightclick.as```:
-```actionscript
+```actionscript3
 	/** jump to the about page. **/
 	private function aboutSetter(evt:ContextMenuEvent):void {
 		navigateToURL(new URLRequest(view.config['aboutlink']),'_blank');
