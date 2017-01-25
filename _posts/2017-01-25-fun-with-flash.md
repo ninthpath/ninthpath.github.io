@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Fun with Flash: Reflected XSS in JW Player v3.16 and v4.3
+title: Fun with Flash: Reflected XSS in JW Player
 ---
 
 ## Intro
