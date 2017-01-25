@@ -45,7 +45,7 @@ I came across a copy of JW Player 3.16 and found an XSS vulnerability.  Version 
 
 ### v3.16
 Anyways, for v3.16, you can find the source code here:
-https://github.com/psych0d0g/kplaylist-ng/tree/master/mediaplayer-3-16
+[https://github.com/psych0d0g/kplaylist-ng/tree/master/mediaplayer-3-16](https://github.com/psych0d0g/kplaylist-ng/tree/master/mediaplayer-3-16)
 
 In ```ConfigManager.as```, we find these lines:
 
