@@ -42,11 +42,12 @@ https://github.com/psych0d0g/kplaylist-ng/tree/master/mediaplayer-3-16
 
 In ```ConfigManager.as```, we find these lines:
 
-```actionscript3
+{% highlight actionscript %}
     public function goTo(obj,itm) {
         getURL(obj.ref.config['aboutlnk'],'_blank');
     };
-```
+{% endhighlight %}
+
 The ```aboutlnk``` is a FlashVar.  getURL is an unsafe function that will run javascript.  To get this to work you need to paste ```http://localhost/mediaplayer.swf?aboutlnk=javascript:alert(1)``` , right click to get the context menu, and then click the “About” option.  This works in Firefox v50.
 
 ### v4.3
