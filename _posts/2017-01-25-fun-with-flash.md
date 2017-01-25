@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Fun with Flash: Reflected XSS in JW Player
+title: Fun with Flash
 ---
 
 ## Intro
