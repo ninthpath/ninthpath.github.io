@@ -11,9 +11,9 @@ I decided this was a good time to try out some frameworks, so I installed the [p
 
 With RestKit, you make a mapping, like:
 
-```objectivec
+{% highlight objectivec %}
 @{@“job_name”:@“jobName”}
-```
+{% endhighlight %}
 
 Then you pass that on to the framework, along with the URL and other info, and it automatically downloads, parses, and saves that data into Core Data.
 
@@ -23,9 +23,9 @@ Then you pass that on to the framework, along with the URL and other info, and i
 MagicalRecord also has convenience methods for importing JSON into Core Data.  Just follow the instructions in their [documentation](https://github.com/magicalpanda/MagicalRecord/blob/master/Docs/Importing-Data.md).  You go into your data model, and populate the User Info (right hand side).  Let’s say you have a field called ```displayName``` and the JSON object has a ```display_name``` field. For the ```displayName``` field, you would add a key called ```mappedKeyName``` and the value would be ```display_name```.
 
 Once you’ve finished adding keys to the entity, to import something, you’d call:
-```objectivec
+{% highlight objectivec %}
 Person *importedPerson = [Person MR_importFromObject:contactInfo];  
-```
+{% endhighlight %}
 
 So, just make a few edits and the framework does the rest.  Great, right?  Well, it depends.  If the JSON object is fairly simple, and you’re importing 10 at a time, sure.  If the JSON object is gnarly, with multiple subarrays and dictionaries, AND you have to import 50 at a time AND establish relationships among them, not so much.  I tried both frameworks, but  I felt like I had to do too much work to shoehorn the frameworks into my code.
 
