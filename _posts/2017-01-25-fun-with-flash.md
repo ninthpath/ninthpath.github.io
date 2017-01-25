@@ -116,9 +116,9 @@ In this code, from ```CallbackView.as```, we see another example of how we can u
 
 Using the “callback” and “file” FlashVars, we can get the line 
 
-```
+{% highlight actionscript %}
 getURL(fcn+"('/end_stream/"+fil+"');");
-``` 
+{% endhighlight %}
 to execute.  
 
 
