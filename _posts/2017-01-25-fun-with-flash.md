@@ -42,7 +42,7 @@ https://github.com/psych0d0g/kplaylist-ng/tree/master/mediaplayer-3-16
 
 In ```ConfigManager.as```, we find these lines:
 
-```
+```actionscript3
     public function goTo(obj,itm) {
         getURL(obj.ref.config['aboutlnk'],'_blank');
     };
