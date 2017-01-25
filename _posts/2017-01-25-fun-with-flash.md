@@ -38,7 +38,7 @@ flash.external.ExternalInterface.call(_root.callback)
 HtmlText
 {% endhighlight  %}
 
-The other issue is that you can add parameters (Flashvars) to the URL.  Combine these two issues and you can create reflected XSS attacks like this: https://mysite.com/player.swf?callback=javascript:alert(1).  
+The other issue is that you can add parameters (Flashvars) to the URL.  Combine these two issues and you can create reflected XSS attacks like this: ```https://mysite.com/player.swf?callback=javascript:alert(1)```.  
 
 ## Reflected XSS in JW Player
 I came across a copy of JW Player 3.16 and found an XSS vulnerability.  Version 5 also had a few XSS vulns, which you can read about [here](https://nealpoole.com/blog/2013/04/unpatched-reflected-xss-in-jw-player-5/) and [here](https://packetstormsecurity.com/files/113332/JW-Player-5.9-Cross-Site-Scripting-Content-Spoofing.html).  They weren’t interested in doing hotfixes for old versions, but they are fixed in the current JWPlayer 7.8.
