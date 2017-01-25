@@ -14,7 +14,7 @@ In Frans Rosen’s [talk on bug bounties](https://www.youtube.com/watch?v=KDo68L
 ## What’s wrong with Flash?
 There are a lot of unsafe functions in Actionscript:
 
-```
+{% highlight actionscript %}
 loadVariables()
 loadMovie()
 getURL()
@@ -29,7 +29,7 @@ Sound.loadSound( 'url' , isStreaming );
 NetStream.play( 'url' );
 flash.external.ExternalInterface.call(_root.callback)
 HtmlText
-```
+{% endhighlight  %}
 
 The other issue is that you can add parameters (Flashvars) to the URL.  Combine these two issues and you can create reflected XSS attacks like this: https://mysite.com/player.swf?callback=javascript:alert(1).  
 
@@ -55,12 +55,12 @@ I found a copy of [version v4.3](https://web.archive.org/web/20121226095419/http
 
 In ```Rightclick.as```:
 
-```
+{% highlight actionscript %}
 	/** jump to the about page. **/
 	private function aboutSetter(evt:ContextMenuEvent):void {
 		navigateToURL(new URLRequest(view.config['aboutlink']),'_blank');
 	};
-```
+{% endhighlight %}
 
 In v4.3, they rewrote it in ActionScript 3.  So they use ```navigateToURL``` instead of ```getURL```, but it's still not a safe function to pass FlashVars to.  The FlashVar variable name also changed from ```aboutlnk``` to ```actionlink```.
 
@@ -72,12 +72,12 @@ Out of curiousity, I checked [v5.1](https://web.archive.org/web/20110923000742/h
 
 In ```Rightclick.as```:
 
-```
+{% highlight actionscript %}
 /** jump to the about page. **/
 		protected function aboutHandler(evt:ContextMenuEvent):void {
 			navigateToURL(new URLRequest('http://www.longtailvideo.com/players/jw-flv-player'), '_blank');
 		}
-```
+{% endhighlight %}
 
 I contacted them about this, and asked if they were going to issue a patch or send out a bulletin.  They replied they didn't support old versions.
 
@@ -85,7 +85,7 @@ I contacted them about this, and asked if they were going to issue a patch or se
 ## Almost, but not quite
 In this code, from ```CallbackView.as```, we see another example of how we can use FlashVars to make the Flash file run javascript:
 
-```
+{% highlight actionscript %}
 /** sending the current file,title,id,state,timestamp to callback **/
     private function sendVars(stt:String,dur:Number,cpl:Boolean) {
         clearInterval(playSentInt);
@@ -112,7 +112,7 @@ In this code, from ```CallbackView.as```, we see another example of how we can u
             varsObject.sendAndLoad(config["callback"],varsObject,"POST");
         }
     };
-```
+{% endhighlight %}
 
 Using the “callback” and “file” FlashVars, we can get the line 
 
