@@ -36,6 +36,7 @@ Sound.loadSound( 'url' , isStreaming );
 NetStream.play( 'url' );
 flash.external.ExternalInterface.call(_root.callback)
 HtmlText
+navigateToURL(request)
 {% endhighlight  %}
 
 The other issue is that you can add parameters (Flashvars) to the URL.  Combine these two issues and you can create reflected XSS attacks like this: ```https://mysite.com/player.swf?callback=javascript:alert(1)```.  
