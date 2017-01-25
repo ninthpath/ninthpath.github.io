@@ -14,7 +14,7 @@ In Frans Rosen’s [talk on bug bounties](https://www.youtube.com/watch?v=KDo68L
 ## What’s wrong with Flash?
 There are a lot of unsafe functions in Actionscript:
 
-```
+```actionscript3
 loadVariables()
 loadMovie()
 getURL()
