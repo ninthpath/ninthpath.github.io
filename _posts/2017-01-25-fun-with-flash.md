@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Fun with Flash
+title: Fun with Flash: XSS in JW Player v3 and v4
 ---
 ## Summary
 JW Player v3.16 and v4.3 have an XSS vulnerability.  It's not serious, though, since it requires user interaction to cause the code to execute.
