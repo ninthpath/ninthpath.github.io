@@ -56,7 +56,7 @@ In ```ConfigManager.as```, we find these lines:
     };
 {% endhighlight %}
 
-The ```aboutlnk``` is a FlashVar.  ```getURL``` is an unsafe function that will run javascript.  To get this to work you need to paste ```http://localhost/mediaplayer.swf?aboutlnk=javascript:alert(1)``` , right click to get the context menu, and then click the “About” option.  This works in Firefox v50.
+The ```aboutlnk``` is a FlashVar.  ```getURL``` is an unsafe function that will run Javascript.  To get this to work you need to paste ```http://localhost/mediaplayer.swf?aboutlnk=javascript:alert(1)``` , right click to get the context menu, and then click the “About” option.  This works in Firefox v50.
 
 ### v4.3
 I found a copy of [version v4.3](https://web.archive.org/web/20121226095419/http://developer.longtailvideo.com/trac/changeset/HEAD/tags/mediaplayer-4.3?old_path=%2F&format=zip) in the Internet Archive.  The vulnerability is still there.  
@@ -91,7 +91,7 @@ I contacted them about this, and asked if they were going to issue a patch or se
 
 
 ## Almost, but not quite
-In this code, from ```CallbackView.as```, we see another example of how we can use FlashVars to make the Flash file run javascript:
+In this code, from ```CallbackView.as```, we see another example of how we can use FlashVars to make the Flash file run Javascript:
 
 {% highlight actionscript %}
 /** sending the current file,title,id,state,timestamp to callback **/
